@@ -5,4 +5,11 @@
 .fundo{
     background-image: url("../assets/calculadora-da-hello-kitty-background.jpg");
     background-repeat: no-repeat;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(134, 6, 95);
+}
+
+.calculadora{
+    position: absolute;
+    background-color: rgb(246, 102, 224);
 }
