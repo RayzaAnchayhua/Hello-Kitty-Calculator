@@ -7,14 +7,15 @@ html{
 }
   
 .fundo {
-    background-image: linear-gradient(to bottom, rgb(248, 205, 225) , rgb(150, 33, 150));
+    background-image: linear-gradient(to bottom,rgb(150, 33, 150), rgb(248, 205, 225) );
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: rgb(134, 6, 95);
+    color: rgb(79, 8, 58);
+    text-align: center;
 }
 
 .calculadora {
     position: absolute;
-    background-color: rgb(246, 102, 224);
+    background-color: rgba(147, 29, 183, 0.8);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -34,4 +35,16 @@ html{
 
 .botao:hover{
     background-color: rgb(158, 62, 155);
+}
+
+#resultado{
+    width: 207px;
+    background-color: white;
+    height: 30px;
+    margin: 5px;
+    font-size: 20px;
+    color: black;
+    text-align: right;
+    padding: 5px;
+    border-radius: 9px;
 }
