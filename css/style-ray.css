@@ -42,6 +42,11 @@ body, html{
     color: white;
     margin: 3px;
     border-radius: 9px;
+    font-size: large;
+}
+
+#botao-custom {
+    font-weight: 700;
 }
 
 .botao:hover{

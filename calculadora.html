@@ -25,8 +25,8 @@
             <tr>
                 <td><button class="botao" onclick="clean()">AC</button></td> <!-- Comentario em HTML -->
                 <td><button class="botao" onclick="insert('( )')">( )</button></td> 
-                <td><button class="botao" onclick="insert('%')">%</button></td>
-                <td><button class="botao" onclick="insert('/')">/</button></td>
+                <td><button class="botao" onclick="insert('%')" style="font-size: large;">%</button></td>
+                <td><button class="botao" onclick="insert('÷')" style="font-size: x-large;">÷</button></td>
             </tr>
             <tr>
                 <td><button class="botao" onclick="insert('7')">7</button></td>
@@ -38,18 +38,18 @@
                 <td><button class="botao" onclick="insert('4')">4</button></td>
                 <td><button class="botao" onclick="insert('5')">5</button></td>
                 <td><button class="botao" onclick="insert('6')">6</button></td>
-                <td><button class="botao" onclick="insert('-')">-</button></td>
+                <td><button id="botao-custom" class="botao" onclick="insert('-')">-</button></td>
             </tr>
             <tr>
                 <td><button class="botao" onclick="insert('1')">1</button></td>
                 <td><button class="botao" onclick="insert('2')">2</button></td>
                 <td><button class="botao" onclick="insert('3')">3</button></td>
-                <td><button class="botao" onclick="insert('+')">+</button></td>   <!--  rowspan significa "extensão de linha". -->
+                <td><button id="botao-custom" class="botao" onclick="insert('+')">+</button></td>   <!--  rowspan significa "extensão de linha". -->
             </tr>
             <tr>
                 <td><button class="botao" onclick="back('')"><</button></td> 
                 <td><button class="botao" onclick="insert('0')">0</button></td>
-                <td><button class="botao" onclick="insert('.')">.</button></td>
+                <td><button id="botao-custom" class="botao" onclick="insert('.')">.</button></td>
                 <td><button class="botao" onclick="calculate('')">=</button></td>
             </tr>
         </table>
