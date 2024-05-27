@@ -15,5 +15,9 @@ Por que?
 ## Pre-requisitos
 
 ```` bash
-clone this repositorio
+git clone https://github.com/RayzaAnchayhua/Calculadora.git
+````
+
+```` bash
+git checkout -b feature/NAME
 ````
