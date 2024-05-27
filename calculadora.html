@@ -3,20 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora</title>
-    <link rel="stylesheet" href="css/style-ray.css">
-    <style>
-    </style>
+    <meta name="description" content="Uma calculadora da hello kitty!">
+    <title>Calculadora da Ray :)</title>
+    <link rel="stylesheet" href="css/style-ray.css"> <!--Link entre o html e css-->
+    <script src="logical.js"></script><!--Link entre o html e js-->
+
 </head>
 <body class="fundo">
+
+    <header>
     <h1>Calculadora da Ray : )</h1>
-    <div class="calculadora">
+    <img src="./assets/clouds.svg" alt="Nuvens fofinhas" class="clouds">
+    </header>   
+
+    <main class="calculadora">
         <h1>Calculadora</h1>
         <p id ="resultado"></p>
         <table>
             <tr>
                 <td><button class="botao" onclick="clean()">C</button></td> <!-- Comentario em HTML -->
-                <td><button class="botao" onclick="back('')"><</button></td> <!-- TD = organizador da tabela -->
+                <td><button class="botao" onclick="back('')"><</button></td> 
                 <td><button class="botao" onclick="insert('/')">/</button></td>
                 <td><button class="botao" onclick="insert('X')">X</button></td>
             </tr>
@@ -43,7 +49,14 @@
                 <td><button class="botao" onclick="insert('.')">.</button></td>
             </tr>
         </table>
-    </div>
-    <script src="logical.js"></script>
+    </main>
+
+    <footer class="container-pai">
+        <img src="./assets/hello-kitty.svg" alt="Hello Kitty" class="hello-kitty">
+        <img src="./assets/frogs.svg" alt="Sapos" class="frogs">
+        <img src="./assets/flowers.svg" alt="Flores" class="flowers"> 
+        
+    </footer>
+
 </body>
 </html>
