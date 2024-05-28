@@ -44,6 +44,8 @@ body, html{
     position: fixed; /* Fixar o rodapé na parte inferior */
     bottom: 0; /* Posicionar o rodapé na parte inferior da tela */
     width: 100%; /* O rodapé ocupará toda a largura da tela */
+    box-shadow: 0 0.1rem 0.5rem;
+    z-index: 15;
 }
 
 .calculadora {
@@ -96,11 +98,14 @@ body, html{
 }
 
 .flowers{
-    position: absolute;
+    position: fixed;
     bottom: 0; 
     max-width: 100%;
-    margin-bottom: 5%; 
+    margin-bottom: 15%; 
     background-position: right bottom;
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .hello-kitty{
