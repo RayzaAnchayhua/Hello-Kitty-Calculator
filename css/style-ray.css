@@ -3,24 +3,47 @@
 *{
     margin: 0;
     padding: 0;
+    overflow: hidden;
+    font-family: "Viga", sans-serif;
 }
 
 body, html{
     width: 100vw;
     height: 100vh;
     display: flex;
-    justify-content: center;
+    text-align: center;
 }
   
 .fundo {
     background-image: url("../assets/background.svg");
+    background-repeat: no-repeat;
     background-size: cover; 
+    background-position: center;
     /* width: 100%;
     height: 100%; */
-    font-family: "Viga", sans-serif;
     color: rgb(79, 8, 58);
     text-align: center;
-    border-bottom: 300px solid rgb(248, 174, 197);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(248, 205, 225); /* Cor de fundo do cabeçalho */
+    padding: 10px 0; /* Espaçamento interno do cabeçalho */
+    position: fixed; /* Fixar o cabeçalho na parte superior */
+    top: 0; /* Posicionar o cabeçalho na parte superior da tela */
+    width: 100%; /* O cabeçalho ocupará toda a largura da tela */
+    box-shadow: 0 0.1rem 0.9rem;
+
+}
+
+.footer {
+    background-color: rgb(248, 174, 197); /* Cor de fundo do rodapé */
+    padding: 10px; /* Espaçamento interno do rodapé */
+    position: fixed; /* Fixar o rodapé na parte inferior */
+    bottom: 0; /* Posicionar o rodapé na parte inferior da tela */
+    width: 100%; /* O rodapé ocupará toda a largura da tela */
 }
 
 .calculadora {
@@ -31,6 +54,21 @@ body, html{
     transform: translate(-50%, -50%);
     border-radius: 15px;
     padding: 15px;
+    box-shadow: 0 0.1rem 0.5rem;
+}
+
+
+#resultado{
+    width: 207px;
+    background-color: white;
+    height: 30px;
+    margin: 5px;
+    font-size: 20px;
+    color: black;
+    text-align: right;
+    padding: 5px;
+    border-radius: 9px;
+    border: 2px solid rgb(79, 8, 58);
 }
 
 .botao {
@@ -45,24 +83,12 @@ body, html{
     font-size: large;
 }
 
-#botao-custom {
-    font-weight: 700;
-}
-
 .botao:hover{
     background-color: rgb(255, 123, 182);
 }
 
-#resultado{
-    width: 207px;
-    background-color: white;
-    height: 30px;
-    margin: 5px;
-    font-size: 20px;
-    color: black;
-    text-align: right;
-    padding: 5px;
-    border-radius: 9px;
+#botao-custom {
+    font-weight: 700;
 }
 
 .conteiner-pai{
@@ -73,15 +99,17 @@ body, html{
     position: absolute;
     bottom: 0; 
     max-width: 100%;
-    left: 0; 
+    margin-bottom: 5%; 
     background-position: right bottom;
 }
 
 .hello-kitty{
     position: absolute;
     bottom: 0; 
-    max-width: 100%;
+    max-width: 100%; 
     left: 0; 
+    margin-bottom: 3%; 
+    z-index: 10;
 }
 
 .frogs{
@@ -89,19 +117,41 @@ body, html{
     bottom: 0; 
     max-width: 100%;
     right: 0;
+    margin-bottom: 3%; 
+    z-index: 10;
 }
+
 .clouds{
     position: absolute;
+    top: 15%;
+    margin-right: 100%;
     width: 550px;
     max-height: 100%;
     animation: clouds-animation 20s infinite linear;
 }
 
-
+.clouds-two{
+    position: absolute;
+    top: 15%;
+    margin-right: 100%;
+    width: 550px;
+    max-height: 100%;
+    animation: clouds-two-animation 20s infinite linear;
+}
 
 @keyframes clouds-animation {
     from {
-        right: 0;
+        right: -159%;
+    }
+    
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes clouds-two-animation {
+    from {
+        right: -150%;
     }
     
     to {
