@@ -8,8 +8,8 @@
 }
 
 body, html{
-    width: 100vw;
-    height: 100vh;
+    width: 100vw; /* Viewport Height*/
+    height: 100vh; /* Viewport Width*/
     display: flex;
     text-align: center;
 }
@@ -19,8 +19,6 @@ body, html{
     background-repeat: no-repeat;
     background-size: cover; 
     background-position: center;
-    /* width: 100%;
-    height: 100%; */
     color: rgb(79, 8, 58);
     text-align: center;
 }
@@ -97,24 +95,14 @@ body, html{
     display: flex;
 }
 
-.flowers{
-    position: fixed;
-    bottom: 0; 
-    max-width: 100%;
-    margin-bottom: 15%; 
-    background-position: right bottom;
-    background-size: cover; 
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
 .hello-kitty{
     position: absolute;
     bottom: 0; 
     max-width: 100%; 
     left: 0; 
     margin-bottom: 3%; 
-    z-index: 10;
+    z-index: 10; 
+    margin: 5%;
 }
 
 .frogs{
@@ -128,22 +116,21 @@ body, html{
 
 .clouds{
     position: absolute;
-    top: 15%;
+    top: 10%;
     margin-right: 100%;
-    width: 550px;
-    max-height: 100%;
+    max-width: 100%;
     animation: clouds-animation 20s infinite linear;
 }
 
 .clouds-two{
     position: absolute;
-    top: 15%;
+    top:10%;
     margin-right: 100%;
-    width: 550px;
-    max-height: 100%;
-    animation: clouds-two-animation 20s infinite linear;
+    max-width: 100%;
+    animation: clouds-two-animation 25s infinite linear;
 }
 
+/* Animations */
 @keyframes clouds-animation {
     from {
         right: -159%;
@@ -156,10 +143,12 @@ body, html{
 
 @keyframes clouds-two-animation {
     from {
-        right: -150%;
+        right: -170%;
     }
     
     to {
         right: 100%;
     }
 }
+
+/*media queries */
