@@ -10,8 +10,7 @@
 body, html{
     width: 100vw; /* Viewport Height*/
     height: 100vh; /* Viewport Width*/
-    display: flex;
-    text-align: center;
+    overflow: hidden;
 }
   
 .fundo {
@@ -21,6 +20,7 @@ body, html{
     background-position: center;
     color: rgb(79, 8, 58);
     text-align: center;
+    position: fixed;
 }
 
 .header {
@@ -55,6 +55,7 @@ body, html{
     border-radius: 15px;
     padding: 15px;
     box-shadow: 0 0.1rem 0.5rem;
+    z-index: 16;
 }
 
 
@@ -91,27 +92,26 @@ body, html{
     font-weight: 700;
 }
 
-.conteiner-pai{
-    display: flex;
-}
-
 .hello-kitty{
-    position: absolute;
-    bottom: 0; 
-    max-width: 100%; 
+    position:absolute;
+    bottom: 15px; 
+    max-width: 50%; 
     left: 0; 
-    margin-bottom: 3%; 
     z-index: 10; 
     margin: 5%;
+    outline: 5px solid black;
 }
 
 .frogs{
-    position: absolute;
+    position:absolute;
     bottom: 0; 
-    max-width: 100%;
-    right: 0;
-    margin-bottom: 3%; 
-    z-index: 10;
+    max-width: 50%; 
+    right: 0; 
+    margin-bottom: 0%; 
+    z-index: 10; 
+    margin: 5%;
+    border-bottom-width: 10%;
+    outline: 5px solid black;
 }
 
 .clouds{
@@ -152,3 +152,36 @@ body, html{
 }
 
 /*media queries */
+@media (max-width: 1020px) { /* Responsividade para telas menores */
+    .hello-kitty, .frogs {
+      max-width: 100px; /* Reduz a largura máxima para telas menores */
+      max-height: 130px; /* Reduz a altura máxima para telas menores */
+      
+
+    }
+  }
+
+  @media (max-width: 540px) { /* Responsividade para telas menores */
+    .hello-kitty, .frogs {
+      max-width: 50%; /* Reduz a largura máxima para telas menores */
+      max-height: 50%; /* Reduz a altura máxima para telas menores */
+      bottom: 30px;
+      
+    }
+
+    .calculadora {
+       width: 50%;
+       height: 50%;
+       top: 45%;
+    }
+    
+    
+    #resultado{
+        width: 85%;
+    }
+    
+    .botao {
+        max-width: 75%;
+        max-height: 30%;
+    }
+  }
