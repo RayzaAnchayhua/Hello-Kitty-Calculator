@@ -33,7 +33,7 @@ body, html{
     top: 0; /* Posicionar o cabeçalho na parte superior da tela */
     width: 100%; /* O cabeçalho ocupará toda a largura da tela */
     box-shadow: 0 0.1rem 0.9rem;
-
+    overflow: hidden;
 }
 
 .footer {
@@ -57,7 +57,6 @@ body, html{
     box-shadow: 0 0.1rem 0.5rem;
     z-index: 16;
 }
-
 
 #resultado{
     width: 207px;
@@ -98,8 +97,9 @@ body, html{
     max-width: 50%; 
     left: 0; 
     z-index: 10; 
-    margin: 5%;
     outline: 5px solid black;
+    top: 60%;
+    margin: 30px;
 }
 
 .frogs{
@@ -109,9 +109,9 @@ body, html{
     right: 0; 
     margin-bottom: 0%; 
     z-index: 10; 
-    margin: 5%;
-    border-bottom-width: 10%;
-    outline: 5px solid black;
+    outline: 5px solid black; /*não ocupa espaço da imagem*/
+    top: 75%;
+    margin: 30px;
 }
 
 .clouds{
@@ -129,6 +129,15 @@ body, html{
     max-width: 100%;
     animation: clouds-two-animation 25s infinite linear;
 }
+
+.credit a {
+    color: rgb(79, 8, 58);
+    cursor: pointer;
+} 
+
+.credit a:hover { 
+    color: rgb(230, 84, 149); /* Cor ao passar o mouse */
+  }
 
 /* Animations */
 @keyframes clouds-animation {
@@ -152,36 +161,50 @@ body, html{
 }
 
 /*media queries */
-@media (max-width: 1020px) { /* Responsividade para telas menores */
-    .hello-kitty, .frogs {
-      max-width: 100px; /* Reduz a largura máxima para telas menores */
-      max-height: 130px; /* Reduz a altura máxima para telas menores */
-      
+@media(max-width: 1440px) {
+    .hello-kitty{
+        top: 60%;
+        margin: 30px;
+    }
 
+    .frogs{
+        top: 75%;
+        margin: 30px;
+    }
+  }
+    
+
+@media (max-width: 1020px) { /* Responsividade para telas menores */
+    .hello-kitty{
+        top: 60%;
     }
   }
 
-  @media (max-width: 540px) { /* Responsividade para telas menores */
-    .hello-kitty, .frogs {
+  @media (max-width: 400) { /* Responsividade para telas menores */
+    .frogs {
       max-width: 50%; /* Reduz a largura máxima para telas menores */
       max-height: 50%; /* Reduz a altura máxima para telas menores */
-      bottom: 30px;
-      
+        
+    }
+
+    .hello-kitty{
+        max-width: 50%;
+        max-height: 50%;
+        bottom: 120px;
     }
 
     .calculadora {
-       width: 50%;
-       height: 50%;
+       width: 60%;
+       height: 57%;
        top: 45%;
     }
     
-    
     #resultado{
-        width: 85%;
+        width: 90%;
     }
     
     .botao {
         max-width: 75%;
-        max-height: 30%;
+        max-height: 90%;
     }
   }
