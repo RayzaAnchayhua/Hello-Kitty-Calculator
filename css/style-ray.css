@@ -173,7 +173,6 @@ body, html{
     }
   }
     
-
 @media (max-width: 1020px) { /* Responsividade para telas menores */
     .hello-kitty{
         top: 60%;

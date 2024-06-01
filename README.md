@@ -7,17 +7,19 @@
 ![Google Chrome](https://img.shields.io/badge/Google%20Chrome-4285F4?style=for-the-badge&logo=GoogleChrome&logoColor=white)
 
 ## Descrição
+
 O que faz o app?
 Com o que foi construido?
 Por que?
 
 ## Instrução de instalação
+
 ## Pre-requisitos
 
-```` bash
+```bash
 git clone https://github.com/RayzaAnchayhua/Calculadora.git
-````
+```
 
-```` bash
+```bash
 git checkout -b feature/NAME
-````
+```
