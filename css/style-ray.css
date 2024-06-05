@@ -1,209 +1,266 @@
-@import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Viga&display=swap");
 
-*{
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    font-family: "Viga", sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: "Viga", sans-serif;
 }
 
-body, html{
-    width: 100vw; /* Viewport Height*/
-    height: 100vh; /* Viewport Width*/
-    overflow: hidden;
+body,
+html {
+  width: 100vw; /* Viewport Height*/
+  height: 100vh; /* Viewport Width*/
+  overflow: hidden;
+  font-family: "Viga", sans-serif;
 }
-  
+
 .fundo {
-    background-image: url("../assets/background.svg");
-    background-repeat: no-repeat;
-    background-size: cover; 
-    background-position: center;
-    color: rgb(79, 8, 58);
-    text-align: center;
-    position: fixed;
+  background-image: url("../assets/background.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: rgb(79, 8, 58);
 }
 
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(248, 205, 225); /* Cor de fundo do cabeçalho */
-    padding: 10px 0; /* Espaçamento interno do cabeçalho */
-    position: fixed; /* Fixar o cabeçalho na parte superior */
-    top: 0; /* Posicionar o cabeçalho na parte superior da tela */
-    width: 100%; /* O cabeçalho ocupará toda a largura da tela */
-    box-shadow: 0 0.1rem 0.9rem;
-    overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(248, 205, 225); /* Cor de fundo do cabeçalho */
+  padding: 10px 0; /* Espaçamento interno do cabeçalho */
+  position: fixed; /* Fixar o cabeçalho na parte superior */
+  top: 0; /* Posicionar o cabeçalho na parte superior da tela */
+  width: 100%; /* O cabeçalho ocupará toda a largura da tela */
+  box-shadow: 0 0.1rem 0.9rem;
+  overflow: hidden;
 }
 
 .footer {
-    background-color: rgb(248, 174, 197); /* Cor de fundo do rodapé */
-    padding: 10px; /* Espaçamento interno do rodapé */
-    position: fixed; /* Fixar o rodapé na parte inferior */
-    bottom: 0; /* Posicionar o rodapé na parte inferior da tela */
-    width: 100%; /* O rodapé ocupará toda a largura da tela */
-    box-shadow: 0 0.1rem 0.5rem;
-    z-index: 15;
+  font-family: "Viga", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(248, 174, 197); /* Cor de fundo do rodapé */
+  padding: 10px; /* Espaçamento interno do rodapé */
+  position: fixed; /* Fixar o rodapé na parte inferior */
+  bottom: 0; /* Posicionar o rodapé na parte inferior da tela */
+  width: 100%; /* O rodapé ocupará toda a largura da tela */
+  box-shadow: 0 0.1rem 0.5rem;
+  z-index: 15;
 }
 
-.calculadora {
+.app{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.calculator {
+  background-color: rgba(241, 108, 168, 0.7);
+  width: 20%;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5%;
+  overflow: hidden;
+  box-shadow: 0 0 1rem 0.5rem;
+  z-index: 16;
+}
+
+.display {
+  min-height: 125px;
+  padding: 5%;
+  display: flex;  
+  justify-content: flex-end;
+  align-items: flex-end;
+  color: white;
+  text-align: right;
+  flex: 1 1 0%;
+}
+
+.display .input{
+    margin-bottom: 0.5rem;
+}
+
+.display .output{
+    font-size: 3rem;
+    font-weight: 700;
+    width: 100%;
+    max-width: 100%;
+    overflow: auto;
+}
+
+.display .operator{
+    color: rgb(79, 8, 58);
+}
+
+.display .brackets,
+.display .percent {
+    color: rgb(248, 174, 197);
+}
+
+.keys {
+    background-color: rgb(223, 48, 127, 0.7);
+    padding: 3%;
+    border-radius: 1.5rem 1.5rem 0 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-gap: 1rem;
+    box-shadow: 0px -2px 16px rgb(0, 0, 0, 0.2);
+}
+
+.keys .key{
+    position: relative;
+    cursor: pointer;
+    display: block;
+    height: 0;
+    padding-top: 100%;
+    background-color: rgb(230, 84, 149);
+    border-radius: 1rem;
+    transition: 0.2s;
+    user-select: none;
+
+}
+
+.keys .key span{
     position: absolute;
-    background-color: rgba(230, 84, 149, 0.8);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border-radius: 15px;
-    padding: 15px;
-    box-shadow: 0 0.1rem 0.5rem;
-    z-index: 16;
-}
-
-#resultado{
-    width: 207px;
-    background-color: white;
-    height: 30px;
-    margin: 5px;
-    font-size: 20px;
-    color: black;
-    text-align: right;
-    padding: 5px;
-    border-radius: 9px;
-    border: 2px solid rgb(79, 8, 58);
-}
-
-.botao {
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    background-color: rgb(219, 0, 99);
-    border: none;
-    color: white;
-    margin: 3px;
-    border-radius: 9px;
-    font-size: large;
-}
-
-.botao:hover{
-    background-color: rgb(255, 123, 182);
-}
-
-#botao-custom {
+    font-size: 2rem;
     font-weight: 700;
+    color: white;
 }
 
-.hello-kitty{
-    position:absolute;
-    bottom: 15px; 
-    max-width: 50%; 
-    left: 0; 
-    z-index: 10; 
-    outline: 5px solid black;
-    top: 60%;
-    margin: 30px;
+.keys .key:hover{
+    box-shadow: inset 0px 0px 8px rgb(0, 0, 0, 0.2);
 }
 
-.frogs{
-    position:absolute;
-    bottom: 0; 
-    max-width: 50%; 
-    right: 0; 
-    margin-bottom: 0%; 
-    z-index: 10; 
-    outline: 5px solid black; /*não ocupa espaço da imagem*/
-    top: 75%;
-    margin: 30px;
+.keys .key.operator span{
+    color: rgb(124, 23, 69);
 }
 
-.clouds{
-    position: absolute;
-    top: 10%;
-    margin-right: 100%;
-    max-width: 100%;
-    animation: clouds-animation 20s infinite linear;
+.keys .key.action span {
+    color: rgb(188, 216, 154);
 }
 
-.clouds-two{
-    position: absolute;
-    top:10%;
-    margin-right: 100%;
-    max-width: 100%;
-    animation: clouds-two-animation 25s infinite linear;
+.hello-kitty {
+  position: absolute;
+  bottom: 15px;
+  max-width: 50%;
+  left: 0;
+  z-index: 10;
+  outline: 5px solid black;
+  top: 60%;
+  margin: 30px;
+}
+
+.frogs {
+  position: absolute;
+  bottom: 0;
+  max-width: 50%;
+  right: 0;
+  margin-bottom: 0%;
+  z-index: 10;
+  outline: 5px solid black; /*não ocupa espaço da imagem*/
+  top: 75%;
+  margin: 30px;
+}
+
+.clouds {
+  position: absolute;
+  top: 10%;
+  margin-right: 100%;
+  max-width: 100%;
+  animation: clouds-animation 20s infinite linear;
+}
+
+.clouds-two {
+  position: absolute;
+  top: 10%;
+  margin-right: 100%;
+  max-width: 100%;
+  animation: clouds-two-animation 25s infinite linear;
 }
 
 .credit a {
-    color: rgb(79, 8, 58);
-    cursor: pointer;
-} 
+  color: rgb(79, 8, 58);
+  cursor: pointer;
+}
 
-.credit a:hover { 
-    color: rgb(230, 84, 149); /* Cor ao passar o mouse */
-  }
+.credit a:hover {
+  color: rgb(230, 84, 149); /* Cor ao passar o mouse */
+}
 
 /* Animations */
 @keyframes clouds-animation {
-    from {
-        right: -159%;
-    }
-    
-    to {
-        right: 100%;
-    }
+  from {
+    right: -159%;
+  }
+
+  to {
+    right: 100%;
+  }
 }
 
 @keyframes clouds-two-animation {
-    from {
-        right: -170%;
-    }
-    
-    to {
-        right: 100%;
-    }
+  from {
+    right: -170%;
+  }
+
+  to {
+    right: 100%;
+  }
 }
 
 /*media queries */
-@media(max-width: 1440px) {
-    .hello-kitty{
-        top: 60%;
-        margin: 30px;
-    }
-
-    .frogs{
-        top: 75%;
-        margin: 30px;
-    }
-  }
-    
-@media (max-width: 1020px) { /* Responsividade para telas menores */
-    .hello-kitty{
-        top: 60%;
-    }
+@media (max-width: 1440px) {
+  .hello-kitty {
+    top: 60%;
+    margin: 30px;
   }
 
-  @media (max-width: 400) { /* Responsividade para telas menores */
-    .frogs {
-      max-width: 50%; /* Reduz a largura máxima para telas menores */
-      max-height: 50%; /* Reduz a altura máxima para telas menores */
-        
-    }
-
-    .hello-kitty{
-        max-width: 50%;
-        max-height: 50%;
-        bottom: 120px;
-    }
-
-    .calculadora {
-       width: 60%;
-       height: 57%;
-       top: 45%;
-    }
-    
-    #resultado{
-        width: 90%;
-    }
-    
-    .botao {
-        max-width: 75%;
-        max-height: 90%;
-    }
+  .frogs {
+    top: 75%;
+    margin: 30px;
   }
+}
+
+@media (max-width: 1020px) {
+  /* Responsividade para telas menores */
+  .hello-kitty {
+    top: 60%;
+  }
+}
+
+@media (max-width: 400) {
+  /* Responsividade para telas menores */
+  .frogs {
+    max-width: 50%; /* Reduz a largura máxima para telas menores */
+    max-height: 50%; /* Reduz a altura máxima para telas menores */
+  }
+
+  .hello-kitty {
+    max-width: 50%;
+    max-height: 50%;
+    bottom: 120px;
+  }
+
+  .calculadora {
+    width: 60%;
+    height: 57%;
+    top: 45%;
+  }
+
+  #resultado {
+    width: 90%;
+  }
+
+  .botao {
+    max-width: 75%;
+    max-height: 90%;
+  }
+}

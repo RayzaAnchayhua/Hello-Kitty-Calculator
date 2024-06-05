@@ -7,6 +7,7 @@
     <title>Calculadora da Ray :)</title>
     <link rel="stylesheet" href="css/style-ray.css" />
     <!--Link entre o html e css-->
+    <link rel="icon" href="./assets/favicon.svg" type="image/x-icon" />
     <script src="logical.js"></script>
     <!--Link entre o html e js-->
   </head>
@@ -23,81 +24,111 @@
     <main class="calculadora">
       <h1>Calculadora</h1>
       <p id="resultado"></p>
-      <table>
-        <tr>
-          <td><button class="botao" onclick="clean()">AC</button></td>
-          <!-- Comentario em HTML -->
-          <td><button class="botao" onclick="insert('( )')">( )</button></td>
-          <td>
-            <button
-              class="botao"
-              onclick="insert('%')"
-              style="font-size: large"
-            >
-              %
-            </button>
-          </td>
-          <td>
-            <button
-              class="botao"
-              onclick="insert('÷')"
-              style="font-size: x-large"
-            >
-              ÷
-            </button>
-          </td>
-        </tr>
-        <tr>
-          <td><button class="botao" onclick="insert('7')">7</button></td>
-          <td><button class="botao" onclick="insert('8')">8</button></td>
-          <td><button class="botao" onclick="insert('9')">9</button></td>
-          <td><button class="botao" onclick="insert('X')">X</button></td>
-        </tr>
-        <tr>
-          <td><button class="botao" onclick="insert('4')">4</button></td>
-          <td><button class="botao" onclick="insert('5')">5</button></td>
-          <td><button class="botao" onclick="insert('6')">6</button></td>
-          <td>
-            <button id="botao-custom" class="botao" onclick="insert('-')">
-              -
-            </button>
-          </td>
-        </tr>
-        <tr>
-          <td><button class="botao" onclick="insert('1')">1</button></td>
-          <td><button class="botao" onclick="insert('2')">2</button></td>
-          <td><button class="botao" onclick="insert('3')">3</button></td>
-          <td>
-            <button id="botao-custom" class="botao" onclick="insert('+')">
-              +
-            </button>
-          </td>
-          <!--  rowspan significa "extensão de linha". -->
-        </tr>
-        <tr>
-          <td><button class="botao" onclick="back('')"><</button></td>
-          <td><button class="botao" onclick="insert('0')">0</button></td>
-          <td>
-            <button id="botao-custom" class="botao" onclick="insert('.')">
-              .
-            </button>
-          </td>
-          <td><button class="botao" onclick="calculate('')">=</button></td>
-        </tr>
-      </table>
-    </main>
+
+    <body>
+      <div class="app">
+
+        <div class="calculator">
+            
+          <div class="display">
+            <div class="content">
+                <div class="input">120 <span class="operator">x</span> 100</div>
+                <div class="output">12,000</div>
+            </div>
+          </div>
+
+          <div class="keys">
+
+            <div data-key="clear" class="key action">
+                <span>AC</span>
+            </div>
+
+            <div data-key="brackets" class="key action">
+                <span>( )</span>
+            </div>
+
+            <div data-key="%" class="key action">
+                <span>%</span>
+            </div>
+
+            <div data-key="/" class="key operator">
+              <span>÷</span>
+            </div>
+
+            <div data-key="7" class="key">
+                <span>7</span>
+            </div>
+
+            <div data-key="8" class="key">
+                <span>8</span>
+            </div>
+
+            <div data-key="9" class="key">
+                <span>9</span>
+            </div>
+
+            <div data-key="*" class="key operator">
+                <span>x</span>
+            </div>
+
+            <div data-key="4" class="key">
+                <span>4</span>
+            </div>
+
+            <div data-key="5" class="key">
+                <span>5</span>
+            </div>
+
+            <div data-key="6" class="key">
+                <span>6</span>
+            </div>
+
+            <div data-key="-" class="key operator">
+                <span>-</span>
+            </div>
+
+            <div data-key="1" class="key">
+                <span>1</span>
+            </div>
+
+            <div data-key="2" class="key">
+                <span>2</span>
+            </div>
+
+            <div data-key="3" class="key">
+                <span>3</span>
+            </div>
+
+            <div data-key="+" class="key operator">
+                <span>+</span>
+            </div>
+
+            <div data-key="backspace" class="key action">
+                <span>&lt;</span>
+            </div>
+
+            <div data-key="0" class="key">
+                <span>0</span>
+            </div>
+
+            <div data-key="." class="key">
+                <span>.</span>
+            </div>
+
+            <div data-key="=" class="key operator">
+                <span>=</span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </body>
 
     <footer class="footer">
-      <div class="credit">
-        Criação e Desenvolvimento:
-        <a
-          href="https://github.com/RayzaAnchayhua"
-          title="Visite meu Github!"
-          target="_blank"
-          >Rayza Luana®</a
-        >
-        2024
+      <div class="credit"> Criação e Desenvolvimento:
+        <a href="https://github.com/RayzaAnchayhua" title="Visite meu Github!" target="_blank"> Rayza Luana®</a> 2024
       </div>
     </footer>
+    
   </body>
 </html>
