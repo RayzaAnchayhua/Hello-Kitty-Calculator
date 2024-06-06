@@ -71,7 +71,7 @@ body, html{
     border: 2px solid rgb(79, 8, 58);
 }
 
-.botao {
+.key{
     width: 50px;
     height: 50px;
     cursor: pointer;
@@ -83,35 +83,32 @@ body, html{
     font-size: large;
 }
 
-.botao:hover{
+.keys:hover{
     background-color: rgb(255, 123, 182);
 }
 
-#botao-custom {
+#keys-custom {
     font-weight: 700;
+}
+
+.key .key-operator key{
+    color: rgb(188, 216, 154);
 }
 
 .hello-kitty{
     position:absolute;
-    bottom: 15px; 
     max-width: 50%; 
-    left: 0; 
+    left: 5%; 
     z-index: 10; 
-    outline: 5px solid black;
-    top: 60%;
-    margin: 30px;
+    bottom: 7%;
 }
 
 .frogs{
     position:absolute;
-    bottom: 0; 
     max-width: 50%; 
-    right: 0; 
-    margin-bottom: 0%; 
+    right: 5%;  
     z-index: 10; 
-    outline: 5px solid black; /*não ocupa espaço da imagem*/
-    top: 75%;
-    margin: 30px;
+    bottom: 7%;
 }
 
 .clouds{
@@ -162,34 +159,19 @@ body, html{
 
 /*media queries */
 @media(max-width: 1440px) {
-    .hello-kitty{
-        top: 60%;
-        margin: 30px;
-    }
-
-    .frogs{
-        top: 75%;
-        margin: 30px;
-    }
+    
   }
     
 @media (max-width: 1020px) { /* Responsividade para telas menores */
-    .hello-kitty{
-        top: 60%;
-    }
+
   }
 
   @media (max-width: 400) { /* Responsividade para telas menores */
-    .frogs {
-      max-width: 50%; /* Reduz a largura máxima para telas menores */
-      max-height: 50%; /* Reduz a altura máxima para telas menores */
-        
-    }
-
+    
     .hello-kitty{
-        max-width: 50%;
-        max-height: 50%;
-        bottom: 120px;
+        visibility: hidden;
+        left: 0;
+        right: 0;
     }
 
     .calculadora {
@@ -202,7 +184,7 @@ body, html{
         width: 90%;
     }
     
-    .botao {
+    .keys {
         max-width: 75%;
         max-height: 90%;
     }
