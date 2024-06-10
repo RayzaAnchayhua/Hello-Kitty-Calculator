@@ -37,8 +37,11 @@ body, html{
 }
 
 .footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: rgb(248, 174, 197); /* Cor de fundo do rodapé */
-    padding: 10px; /* Espaçamento interno do rodapé */
+    padding: 10px 0; /* Espaçamento interno do rodapé */
     position: fixed; /* Fixar o rodapé na parte inferior */
     bottom: 0; /* Posicionar o rodapé na parte inferior da tela */
     width: 100%; /* O rodapé ocupará toda a largura da tela */
@@ -99,7 +102,7 @@ body, html{
     position:absolute;
     max-width: 50%; 
     left: 5%; 
-    z-index: 10; 
+    z-index: 10;  
     bottom: 7%;
 }
 
@@ -169,7 +172,7 @@ body, html{
   @media (max-width: 400) { /* Responsividade para telas menores */
     
     .hello-kitty{
-        visibility: hidden;
+        display: none;
         left: 0;
         right: 0;
     }

@@ -5,10 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Uma calculadora da hello kitty!" />
     <title>Calculadora da Ray :)</title>
-    <link rel="stylesheet" href="css/style-ray.css" />
-    <!--Link entre o html e css-->
-    <script src="logical.js"></script>
-    <!--Link entre o html e js-->
+    <link rel="stylesheet" href="css/style-ray.css" /> <!--Link entre o html e css-->
+    <script src="logical.js"></script><!--Link entre o html e js-->
   </head>
   <body class="fundo">
 
@@ -21,6 +19,7 @@
       <img src="./assets/frogs.svg" alt="Sapos" class="frogs" />
       <img src="./assets/clouds.svg" alt="Nuvens fofinhas" class="clouds" />
       <img src="./assets/clouds.svg" alt="Nuvens fofinhas" class="clouds-two" />
+      
 
       <div class="calculadora">
       <h1>Calculadora</h1>
@@ -29,15 +28,15 @@
       <table>
         <tr>
           <td><button class="key-action key" onclick="clean()">AC</button></td><!-- Comentario em HTML -->
-          <td><button class="key-action key" onclick="insert('()')">( )</button></td>
+          <td><button class="key-action key" onclick="brackets('()')">( )</button></td>
           <td><button class="key-action key" onclick="insert('%')" style="font-size: large">%</button></td>
-          <td><button class="key-operator key" onclick="insert('÷')" style="font-size: x-large">÷</button></td>
+          <td><button class="key-operator key" onclick="insert('/')" style="font-size: x-large">÷</button></td>
         </tr>
         <tr>
           <td><button class="key" onclick="insert('7')">7</button></td>
           <td><button class="key" onclick="insert('8')">8</button></td>
           <td><button class="key" onclick="insert('9')">9</button></td>
-          <td><button class="key-operator key" onclick="insert('*')">*</button></td>
+          <td><button class="key-operator key" onclick="ins('*')">*</button></td>
         </tr>
         <tr>
           <td><button class="key" onclick="insert('4')">4</button></td>
@@ -55,7 +54,7 @@
           <td><button class="key-action key" onclick="back('')"><</button></td>
           <td><button class="key" onclick="insert('0')">0</button></td>
           <td><button id="key-custom" class="key" onclick="insert('.')">.</button></td>
-          <td><button class="key-operator key" onclick="calculate('')">=</button></td>
+          <td><button class="key-operator key" onclick="result('')">=</button></td>
         </tr>
       </table>
 
@@ -63,9 +62,7 @@
     </main>
 
     <footer class="footer">
-      <div class="credit">Criação e Desenvolvimento:
-        <a href="https://github.com/RayzaAnchayhua" title="Visite meu Github!" target="_blank">Rayza Luana®</a>2024
-      </div>
+      <div class="credit">Criação e Desenvolvimento:<a href="https://github.com/RayzaAnchayhua" title="Visite meu Github!" target="_blank">Rayza Luana®</a>2024</div>
     </footer>
   </body>
 </html>
