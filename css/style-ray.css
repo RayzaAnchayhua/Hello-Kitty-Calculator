@@ -9,8 +9,8 @@
 
 body,
 html {
-  width: 100vw; /* Viewport Height*/
-  height: 100vh; /* Viewport Width*/
+  width: 100svw; /* Viewport Height*/
+  height: 100svh; /* Viewport Width*/
   overflow: hidden;
 }
 
