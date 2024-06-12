@@ -9,7 +9,10 @@ function clean() {
 
 function back() {
   var resultado = document.getElementById("resultado").innerHTML;
-  document.getElementById("resultado").innerHTML = resultado.substring( 0, resultado.length - 1);
+  document.getElementById("resultado").innerHTML = resultado.substring(
+    0,
+    resultado.length - 1
+  );
 }
 
 function result() {
@@ -26,20 +29,19 @@ function brackets() {
 
   if (
     resultado.indexOf("(") == -1 ||
-    (resultado.indexOf("(") != -1 && 
-     resultado.indexOf(")") != -1 && 
-     resultado.lastIndexOf("(") < resultado.lastIndexOf(")"))
+    (resultado.indexOf("(") != -1 &&
+      resultado.indexOf(")") != -1 &&
+      resultado.lastIndexOf("(") < resultado.lastIndexOf(")"))
   ) {
     resultado += "(";
   } else if (
-    (resultado.indexOf("(") != -1 && 
-     resultado.indexOf(")") == -1) ||
-    (resultado.indexOf("(") != -1 && 
-     resultado.indexOf(")") != -1 && 
-     resultado.lastIndexOf("(") > resultado.lastIndexOf(")")
-  )) {
+    (resultado.indexOf("(") != -1 && resultado.indexOf(")") == -1) ||
+    (resultado.indexOf("(") != -1 &&
+      resultado.indexOf(")") != -1 &&
+      resultado.lastIndexOf("(") > resultado.lastIndexOf(")"))
+  ) {
     resultado += ")";
   }
 
   document.getElementById("resultado").innerHTML = resultado;
-    }
+}

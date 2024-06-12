@@ -1,168 +1,213 @@
-@import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Viga&display=swap");
 
-*{
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    font-family: "Viga", sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: "Viga", sans-serif;
 }
 
-body, html{
-    width: 100vw; /* Viewport Height*/
-    height: 100vh; /* Viewport Width*/
-    overflow: hidden;
+body,
+html {
+  width: 100vw; /* Viewport Height*/
+  height: 100vh; /* Viewport Width*/
+  overflow: hidden;
 }
-  
+
 .fundo {
-    background-image: url("../assets/background.svg");
-    background-repeat: no-repeat;
-    background-size: cover; 
-    background-position: center;
-    color: rgb(79, 8, 58);
-    text-align: center;
-    position: fixed;
+  background-image: url("../assets/background.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: rgb(79, 8, 58);
+  text-align: center;
+  position: fixed;
 }
 
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(248, 205, 225); /* Cor de fundo do cabeçalho */
-    padding: 10px 0; /* Espaçamento interno do cabeçalho */
-    position: fixed; /* Fixar o cabeçalho na parte superior */
-    top: 0; /* Posicionar o cabeçalho na parte superior da tela */
-    width: 100%; /* O cabeçalho ocupará toda a largura da tela */
-    box-shadow: 0 0.1rem 0.9rem;
-    overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(248, 205, 225); /* Cor de fundo do cabeçalho */
+  padding: 10px 0; /* Espaçamento interno do cabeçalho */
+  position: fixed; /* Fixar o cabeçalho na parte superior */
+  top: 0; /* Posicionar o cabeçalho na parte superior da tela */
+  width: 100%; /* O cabeçalho ocupará toda a largura da tela */
+  box-shadow: 0 0.1rem 0.9rem;
+  overflow: hidden;
+  z-index: 5000;
 }
 
 .footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(248, 174, 197); /* Cor de fundo do rodapé */
-    padding: 10px 0; /* Espaçamento interno do rodapé */
-    position: fixed; /* Fixar o rodapé na parte inferior */
-    bottom: 0; /* Posicionar o rodapé na parte inferior da tela */
-    width: 100%; /* O rodapé ocupará toda a largura da tela */
-    box-shadow: 0 0.1rem 0.5rem;
-    z-index: 15;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(248, 174, 197); /* Cor de fundo do rodapé */
+  padding: 10px 0; /* Espaçamento interno do rodapé */
+  position: fixed; /* Fixar o rodapé na parte inferior */
+  bottom: 0; /* Posicionar o rodapé na parte inferior da tela */
+  width: 100%; /* O rodapé ocupará toda a largura da tela */
+  box-shadow: 0 0.1rem 0.5rem;
+  z-index: 50;
 }
 
 .calculadora {
+  position: absolute;
+  background-color: rgba(230, 84, 149, 0.8);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 0.1rem 0.5rem;
+  z-index: 16;
+}
+
+#resultado {
+  width: 207px;
+  background-color: white;
+  height: 30px;
+  margin: 5px;
+  font-size: 20px;
+  color: black;
+  text-align: right;
+  padding: 5px;
+  border-radius: 9px;
+  border: 2px solid rgb(79, 8, 58);
+}
+
+.key {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  background-color: rgb(219, 0, 99);
+  border: none;
+  color: white;
+  margin: 3px;
+  border-radius: 9px;
+  font-size: large;
+}
+
+.keys:hover {
+  background-color: rgb(255, 123, 182);
+}
+
+#keys-custom {
+  font-weight: 700;
+}
+
+.key .key-operator key {
+  color: rgb(188, 216, 154);
+}
+
+.hello-kitty {
+  position: absolute;
+  max-width: 50%;
+  left: 5%;
+  z-index: 10;
+  bottom: 7%;
+}
+
+.frogs {
+  position: absolute;
+  max-width: 50%;
+  right: 5%;
+  z-index: 10;
+  bottom: 7%;
+}
+
+.clouds {
+  position: absolute;
+  top: 10%;
+  margin-right: 100%;
+  max-width: 100%;
+  animation: clouds-animation 20s infinite linear;
+}
+
+.clouds-two {
+  position: absolute;
+  top: 10%;
+  margin-right: 100%;
+  max-width: 100%;
+  animation: clouds-two-animation 25s infinite linear;
+}
+
+.credit a {
+  color: rgb(79, 8, 58);
+  cursor: pointer;
+}
+
+.credit a:hover {
+  color: rgb(230, 84, 149); /* Cor ao passar o mouse */
+}
+
+/* Animations */
+@keyframes clouds-animation {
+  from {
+    right: -159%;
+  }
+
+  to {
+    right: 100%;
+  }
+}
+
+@keyframes clouds-two-animation {
+  from {
+    right: -170%;
+  }
+
+  to {
+    right: 100%;
+  }
+}
+
+/*media queries */
+@media only screen and (max-width: 375px) {
+  .hello-kitty {
+    display: none;
+  }
+
+  .frogs {
+    position: absolute;
+    max-width: 50%;
+    right: 25%;
+    z-index: 10;
+    bottom: 5%;
+  }
+
+  .footer {
+    font-size: small;
+  }
+
+  .header {
+    font-size: small;
+  }
+}
+
+@media (max-width: 375px) and (max-height: 500px) {
+  .calculadora {
     position: absolute;
     background-color: rgba(230, 84, 149, 0.8);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 15px;
-    padding: 15px;
+    padding: 10px;
     box-shadow: 0 0.1rem 0.5rem;
     z-index: 16;
-}
+  }
 
-#resultado{
-    width: 207px;
-    background-color: white;
+  .key {
+    width: 35px;
+    height: 35px;
+    font-size: small;
+  }
+
+  #resultado {
+    width: 87%;
     height: 30px;
     margin: 5px;
     font-size: 20px;
-    color: black;
-    text-align: right;
-    padding: 5px;
-    border-radius: 9px;
-    border: 2px solid rgb(79, 8, 58);
-}
-
-.key{
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    background-color: rgb(219, 0, 99);
-    border: none;
-    color: white;
-    margin: 3px;
-    border-radius: 9px;
-    font-size: large;
-}
-
-.keys:hover{
-    background-color: rgb(255, 123, 182);
-}
-
-#keys-custom {
-    font-weight: 700;
-}
-
-.key .key-operator key{
-    color: rgb(188, 216, 154);
-}
-
-.hello-kitty{
-    position:absolute;
-    max-width: 50%; 
-    left: 5%; 
-    z-index: 10;  
-    bottom: 7%;
-}
-
-.frogs{
-    position:absolute;
-    max-width: 50%; 
-    right: 5%;  
-    z-index: 10; 
-    bottom: 7%;
-}
-
-.clouds{
-    position: absolute;
-    top: 10%;
-    margin-right: 100%;
-    max-width: 100%;
-    animation: clouds-animation 20s infinite linear;
-}
-
-.clouds-two{
-    position: absolute;
-    top:10%;
-    margin-right: 100%;
-    max-width: 100%;
-    animation: clouds-two-animation 25s infinite linear;
-}
-
-.credit a {
-    color: rgb(79, 8, 58);
-    cursor: pointer;
-} 
-
-.credit a:hover { 
-    color: rgb(230, 84, 149); /* Cor ao passar o mouse */
   }
-
-/* Animations */
-@keyframes clouds-animation {
-    from {
-        right: -159%;
-    }
-    
-    to {
-        right: 100%;
-    }
 }
-
-@keyframes clouds-two-animation {
-    from {
-        right: -170%;
-    }
-    
-    to {
-        right: 100%;
-    }
-}
-
-/*media queries */
-  @media (max-width: 400) {
-    .hello-kitty{
-        display: none;
-    }
-  }
