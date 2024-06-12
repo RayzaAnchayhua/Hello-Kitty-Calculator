@@ -22,22 +22,24 @@ function result() {
 }
 
 function brackets() {
-  var resultado = document.getElementById("resultado").innerHTML;{ 
-    if (
-      resultado.indexOf("(") == -1 ||
-      resultado.indexOf("(") != -1 &&  
-      resultado.indexOf(")") != -1 && 
-      resultado.lastIndexOf("(") < resultado.lastIndexOf(")")
-    ){
-      resultado += "(";
-    } else if (
-      resultado.indexOf("(") != -1 &&
-      resultado.indexOf(")") == -1 ||  
-      resultado.indexOf("(") != -1 && 
-      resultado.indexOf(")") != -1 && 
-      resultado.lastIndexOf("(") > resultado.lastIndexOf(")")
-  ){
-      resultado += ")";
+  var resultado = document.getElementById("resultado").innerHTML;
+
+  if (
+    resultado.indexOf("(") == -1 ||
+    (resultado.indexOf("(") != -1 && 
+     resultado.indexOf(")") != -1 && 
+     resultado.lastIndexOf("(") < resultado.lastIndexOf(")"))
+  ) {
+    resultado += "(";
+  } else if (
+    (resultado.indexOf("(") != -1 && 
+     resultado.indexOf(")") == -1) ||
+    (resultado.indexOf("(") != -1 && 
+     resultado.indexOf(")") != -1 && 
+     resultado.lastIndexOf("(") > resultado.lastIndexOf(")")
+  )) {
+    resultado += ")";
   }
-}
-}
+
+  document.getElementById("resultado").innerHTML = resultado;
+    }

@@ -161,34 +161,8 @@ body, html{
 }
 
 /*media queries */
-@media(max-width: 1440px) {
-    
-  }
-    
-@media (max-width: 1020px) { /* Responsividade para telas menores */
-
-  }
-
-  @media (max-width: 400) { /* Responsividade para telas menores */
-    
+  @media (max-width: 400) {
     .hello-kitty{
         display: none;
-        left: 0;
-        right: 0;
-    }
-
-    .calculadora {
-       width: 60%;
-       height: 57%;
-       top: 45%;
-    }
-    
-    #resultado{
-        width: 90%;
-    }
-    
-    .keys {
-        max-width: 75%;
-        max-height: 90%;
     }
   }
